@@ -67,7 +67,8 @@ void GLSLProgram::prependLine(const std::string& line)
 
 bool loadFile(const std::string& path, std::string& data)
 {
-	std::ifstream file(path.c_str());
+	std::string fullPath = "/Users/r/code/graphics/geometry/DualContouringSample/DualContouringSample/" + path;
+	std::ifstream file(fullPath.c_str());
 	std::stringstream fileData;
 	fileData << file.rdbuf();
 	file.close();
